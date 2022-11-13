@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 50%;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Canela Web';
+}
+
+.countdown div {
+    width: 10rem;
+    height: 10rem;
+    background: linear-gradient(to bottom,
+            rgba(251, 231, 224, 0.9) 50%,
+            rgba(255, 224, 204, 0.9) 0);
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.8rem 2.5rem rgba(0, 0, 0, 0.5);
+    border-radius: 25%;
+    position: relative;
+}
+
+/* .countdown div::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.24rem;
+    background-color: coral;
+} */
+
+.countdown div::after {
+    content: attr(data-content);
+    font-size: 2.5rem;
+    font-weight: 400;
+    position: absolute;
+    bottom: -6rem;
+    font-family: 'Canela Web';
+}
+
+.dynamic-content {
+    height: 17.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    box-shadow: 0 0.8rem 2.5rem rgba(33, 92, 92, 0.515);
+    margin: 5rem 5rem 5rem 5rem;
+    position: relative;
+    font-size: 14px;
+    font-family: 'Canela Web';
+    background: rgba(220, 253, 255, 0.515);
+    fill-opacity: 50%;
+    z-index: 5;
+    border-radius: 5%;
+}
